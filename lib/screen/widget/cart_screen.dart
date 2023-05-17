@@ -13,7 +13,7 @@ class CartScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       height: size.heightScreen,
       width: size.widthScreen,
       child: Center(
@@ -28,7 +28,37 @@ class CartScreen extends StatelessWidget {
                     children: [
                       IconButton(
                           onPressed: () {
-                            value.clearCartItems();
+                            showDialog(
+                              context: context,
+                              builder: (context) {
+                                return AlertDialog(
+                                  title: const Text(
+                                    ' Are you sure clear orders?',
+                                    style: TextStyle(fontSize: 14),
+                                  ),
+                                  actions: [
+                                    TextButton(
+                                      onPressed: () {
+                                        Navigator.pop(context, true);
+                                      },
+                                      child: const Text(
+                                        'Yes',
+                                        style: TextStyle(color: Colors.red),
+                                      ),
+                                    ),
+                                    TextButton(
+                                      onPressed: () {
+                                        Navigator.pop(context, false);
+                                      },
+                                      child: const Text('Cancel',
+                                          style:
+                                              TextStyle(color: Colors.black)),
+                                    ),
+                                  ],
+                                );
+                              },
+                            ).then((v) => v ? value.clearCartItems() : null);
+                            //value.clearCartItems();
                           },
                           icon: const Icon(Icons.clear)),
                       Expanded(

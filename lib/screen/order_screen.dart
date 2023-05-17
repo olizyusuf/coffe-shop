@@ -36,7 +36,8 @@ class OrderScreen extends StatelessWidget {
                           color: Colors.black.withOpacity(0.3),
                           spreadRadius: 5,
                           blurRadius: 7,
-                          offset: Offset(0, 3), // changes position of shadow
+                          offset:
+                              const Offset(0, 3), // changes position of shadow
                         ),
                       ]),
                   child: Column(
@@ -47,7 +48,7 @@ class OrderScreen extends StatelessWidget {
                             onPressed: () {
                               Navigator.pop(context);
                             },
-                            icon: Icon(Icons.arrow_back_ios_new),
+                            icon: const Icon(Icons.arrow_back_ios_new),
                           ),
                         ],
                       ),
@@ -106,7 +107,7 @@ class OrderScreen extends StatelessWidget {
                           ),
                           child: Row(
                               mainAxisAlignment: MainAxisAlignment.center,
-                              children: [Text('S')]),
+                              children: const [Text('S')]),
                         ),
                         const SizedBox(
                           width: 5,
@@ -131,7 +132,7 @@ class OrderScreen extends StatelessWidget {
                           ),
                           child: Row(
                               mainAxisAlignment: MainAxisAlignment.center,
-                              children: [Text('M')]),
+                              children: const [Text('M')]),
                         ),
                         const SizedBox(
                           width: 5,
@@ -156,7 +157,7 @@ class OrderScreen extends StatelessWidget {
                           ),
                           child: Row(
                               mainAxisAlignment: MainAxisAlignment.center,
-                              children: [Text('L')]),
+                              children: const [Text('L')]),
                         ),
                       ],
                     );
@@ -224,7 +225,7 @@ class OrderScreen extends StatelessWidget {
                       backgroundColor: Colors.white,
                       elevation: 5,
                       shadowColor:
-                          Color.fromARGB(255, 0, 0, 0).withOpacity(0.7),
+                          const Color.fromARGB(255, 0, 0, 0).withOpacity(0.7),
                       side: const BorderSide(
                         width: 2,
                         color: Colors.white,

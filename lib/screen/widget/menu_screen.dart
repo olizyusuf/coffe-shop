@@ -55,10 +55,10 @@ class MenuScreen extends StatelessWidget {
                                       data['size'], data['image']);
                               Navigator.pushNamed(context, '/order');
                             },
-                            icon: Icon(Icons.arrow_forward_ios_sharp),
+                            icon: const Icon(Icons.arrow_forward_ios_sharp),
                           ),
                         ),
-                        Divider(
+                        const Divider(
                           thickness: 2,
                         )
                       ],
